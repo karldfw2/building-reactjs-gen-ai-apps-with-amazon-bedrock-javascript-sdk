@@ -28,7 +28,7 @@ const Menu = ({ signOut, groups, ...user }) => {
 
       identity={{
         onFollow: (() => { navigate("/") }),
-        title: <div className='title'>Amazon Bedrock Javascript</div>,
+        title: <div className='title'>Karl Schultz Sandbox 3</div>,
 
       }}
       utilities={[
@@ -41,7 +41,7 @@ const Menu = ({ signOut, groups, ...user }) => {
           href: "https://js.langchain.com/docs/get_started/introduction", 
           external: true, externalIconAriaLabel: " (opens in a new tab)"
         },
-        {
+        /*{{
           type: "button", text: "This repo", 
           href: "https://github.com/build-on-aws/building-reactjs-gen-ai-apps-with-amazon-bedrock-javascript-sdk", 
           external: true, externalIconAriaLabel: " (opens in a new tab)"
@@ -70,16 +70,16 @@ const Menu = ({ signOut, groups, ...user }) => {
             },
           ]
 
-        },
+        },*/
         {
           type: "menu-dropdown",
-          text: "You",
+          text: user.signInDetails?.loginId,
           onItemClick: ((e) => { itemClick(e) }),
           iconName: "user-profile",
           items: [
             { id: "email", text: user.signInDetails?.loginId },
             {
-              id: "signout", text: "Salir"
+              id: "signout", text: "Log out"
             }
           ]
 
